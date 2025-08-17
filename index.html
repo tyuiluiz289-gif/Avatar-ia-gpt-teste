@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AvaGPT - Offline</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>AvaGPT</h1>
+    <div id="chat-box"></div>
+    <input id="user-input" placeholder="Fala com a Ava..." />
+    <button onclick="handleSend()">Enviar</button>
+    <script src="../js/chat-core.js"></script>
+    <script>
+        function handleSend() {
+            const input = document.getElementById("user-input").value;
+            const response = sendMessage(input);
+            document.getElementById("chat-box").innerHTML += "<p><b>Você:</b> " + input + "</p><p><b>Ava:</b> " + response + "</p>";
+        }
+    </script>
+</body>
+</html>
